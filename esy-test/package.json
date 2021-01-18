@@ -1,8 +1,8 @@
 {
   "esy": {
-    "build": "hello"
+    "build": "rustc --version"
   },
   "dependencies": {
-    "esy-hello": "*"
+    "esy-rustc": "*"
   }
 }
