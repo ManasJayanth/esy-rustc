@@ -2,10 +2,13 @@
   "name": "esy-rustc",
   "version": "1.49.0",
   "description": "Rustc packaged for esy",
-  "source": ":no-source",
+  "source": "https://static.rust-lang.org/dist/rustc-1.49.0-src.tar.gz#sha256:b50aefa8df1fdfc9bccafdbf37aee611c8dfe81bf5648d5f43699c50289dc779",
   "override": {
     "buildEnv": {},
-    "build": "sh build.sh",
+    "build": [
+      "./configure --prefix #{self.install} --release-channel=stable",
+      "make"
+    ],
     "install": "make install",
     "buildsInSource": true,
     "dependencies": {}
