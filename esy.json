@@ -12,7 +12,8 @@
     "install": "make install",
     "buildsInSource": true,
     "dependencies": {
-      "esy-cmake": "esy-packages/esy-cmake"
+      "esy-cmake": "esy-packages/esy-cmake",
+      "esy-ninja": "esy-packages/esy-ninja"
     }
   }
 }
