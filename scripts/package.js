@@ -20,8 +20,10 @@ function mkdirpSync(pathStr) {
 
 function copy(src, dest) {
   let srcStat = fs.statSync(src);
-  if (srcStat.isDirectory() && !fs.existsSync(dest)) {
-    mkdirpSync(dest);
+  if (srcStat.isDirectory()) {
+    if (!fs.existsSync(dest)) {
+      mkdirpSync(dest);
+    }
     let srcEntries = fs.readdirSync(src);
     for (srcEntry of srcEntries) {
       copy(path.join(src, srcEntry), path.join(dest, srcEntry));
