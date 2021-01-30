@@ -162,7 +162,7 @@ download(source)
     }
   })
   .then((pkgPath) => {
-    function filterComments(o) {
+    function filterComments(o = {}) {
       return Object.keys(o)
         .filter((k) => !k.startsWith("//"))
         .reduce((acc, k) => {
